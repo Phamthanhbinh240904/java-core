@@ -8,7 +8,9 @@ public class Activity22 {
         System.out.println("nhap so nguyen:");
         int a=sc.nextInt();
         int b=3*a+2*a*10+a*100;
-        System.out.println("bieu thuc can lam n+nn+nnn la:"+b);
+        int c=10*a+a;
+        int d=100*a+c;
+        System.out.println(+a+"+"+c+"+"+"+" +d +"="+b);
     }
 
 }
