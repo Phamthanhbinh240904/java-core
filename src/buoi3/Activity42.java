@@ -19,7 +19,7 @@ public class Activity42 {
 
 
 
-            System.out.println("\n");
+            System.out.println("");
 
         }
 
