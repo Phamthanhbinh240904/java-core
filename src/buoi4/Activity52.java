@@ -16,15 +16,17 @@ public class Activity52 {
         }
 
         for(int i=0;i<n;i++){
-            System.out.print("a["+i+"]="+a[i]+"\t");
-        }
+            System.out.println("a["+i+"]="+a[i]+"\t");
 
-        for(int i=0;i<n;i++){
             for(int j=1;j<n;j++){
                 if(a[i]==a[j]){
-                    return;
+                    System.out.println(+a[i]);
+
                 }
             }
         }
+
+
+
     }
 }
