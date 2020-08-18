@@ -1,6 +1,4 @@
-package buoi5.Activity51;
-
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+package buoi5.Activity61;
 
 public class Rectangle {
     private int dai;

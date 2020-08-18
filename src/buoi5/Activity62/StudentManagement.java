@@ -1,6 +1,4 @@
-package buoi5.Activity52;
-
-        import java.util.Arrays;
+package buoi5.Activity62;
 
 public class StudentManagement {
     int n;

@@ -1,4 +1,4 @@
-package buoi5.Activity52;
+package buoi5.Activity62;
 
 public class Student {
     private String name;
