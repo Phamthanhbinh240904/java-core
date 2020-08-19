@@ -3,25 +3,36 @@ package buoi4;
 import java.util.Scanner;
 
 public class Activity54 {
+    public static Scanner scanner = new Scanner(System.in);
+
+    /**
+     * main
+     *
+     * @param args
+     */
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("nhap so luong mang 1:");
-
-        int n=sc.nextInt();
-        int a[]=new int[n];
-        int result[]=new int[n];
-        for(int i=0;i<n;i++){
-            a[i]=sc.nextInt();
-            result[i]=a[i];
+        System.out.print("Nhập số phần tử của mảng: ");
+        int n = scanner.nextInt();
+        // khởi tạo mảng arr
+        int[] arr = new int[n];
+        System.out.print("Nhập các phần tử của mảng: \n");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("a[%d] = ", i);
+            arr[i] = scanner.nextInt();
         }
+        System.out.print("Các phần tử của mảng: ");
+        show(arr);
+    }
 
-        System.out.println("nhap mang thu 2:");
-
-        int m=sc.nextInt();
-        int b[]=new int[m];
-        for(int i=0;i<m;i++){
-
+    /**
+     * in các phần tử của mảng ra màn hình
+     *
+     * @param arr: mảng các số nguyên
+     * @param n: số phần tử của mảng
+     */
+    public static void show(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
-
     }
 }

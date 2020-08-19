@@ -14,17 +14,14 @@ public class Activity52 {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("a[" + i + "]=" + a[i] + "\t");
-
-            if (a[i] == a[i+1]) {
-                System.out.println(+a[i]);
-            }
+        show(a);
 
 
+
+    }
+    public static void show(int a[]){
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i]+"");
         }
-
-
     }
 }
