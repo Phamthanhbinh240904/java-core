@@ -5,13 +5,13 @@ public class Student {
     private float gpa;
 
     public Student() {
-
     }
 
     public Student(String name, float gpa) {
         this.name = name;
         this.gpa = gpa;
     }
+
 
     public String getName() {
         return name;
@@ -29,14 +29,12 @@ public class Student {
         this.gpa = gpa;
     }
 
-    public String kt(){
-        String a;
-        if(gpa>=1.5f){
-            a="do";
-        }else {
-            a="truot";
+    public boolean checDo(){
+        if(gpa >=1.5f){
+            return true;
+        } else {
+            return false;
         }
-        return a;
     }
 
     @Override

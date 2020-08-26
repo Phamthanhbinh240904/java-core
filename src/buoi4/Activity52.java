@@ -14,14 +14,34 @@ public class Activity52 {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
+        System.out.println("mang trung la:");
         show(a);
 
 
-
     }
-    public static void show(int a[]){
-        for(int i=0;i<a.length;i++){
-            System.out.print(a[i]+"");
+
+    public static void show(int a[]) {
+        int b = 0;
+        for (int i = 0; i < a.length; i++) {
+/*
+            for(int j=i+1;j<a.length;j++){
+                if(a[j]==a[i]){
+                    b=a[j];
+                    System.out.println(b);
+                }
+
+            }
+*/
+           for(int j=1;j<a.length;j++){
+               if(a[j]!=a[i]){
+                   b=a[j];
+               }
+           }
+            System.out.println(b);
+
+
         }
+
+
     }
 }
