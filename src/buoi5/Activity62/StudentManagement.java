@@ -47,11 +47,13 @@ public class StudentManagement {
     public String diemCao() {
         float b=0;
         int index=0;
-        for(int i=0;i<n;i++){
+        int i=0;
+        for(Student student : students){
             if(b<students[i].getGpa()){
                 b=students[i].getGpa();
                 index=i;
             }
+            i++;
         }
         return students[index].getName()+"\t"+students[index].getGpa();
     }
@@ -59,11 +61,13 @@ public class StudentManagement {
     public String diemThap() {
         float b=0;
         int index=0;
-        for(int i=0;i<n;i++){
+        int i=0;
+        for(Student student : students){
             if(b>students[i].getGpa()){
                 b=students[i].getGpa();
                 index=i;
             }
+            i++;
         }
         return students[index].getName()+"\t"+students[index].getGpa();
     }

@@ -24,6 +24,7 @@ public class SmartPhone {
         this.color = color;
         this.price = price;
         this.totalSold = totalSold;
+
     }
 
     public String getBrand() {

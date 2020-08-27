@@ -9,33 +9,49 @@ public class Store {
     private int n;
     private SmartPhone[] phones;
 
+    public Store() {
+    }
+
     public Store(int n) {
         phones = new SmartPhone[n];
-
+        this.n=n;
         Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < n; i++) {
-            System.out.println("nhap thuong hieu dien thoai:");
-            String brand = sc.nextLine();
-            System.out.println("Có Bluetooth hay ko ");
-            boolean hasBluetooth = sc.hasNext();
-            System.out.println("Có 5G hay ko");
-            boolean has5G = sc.hasNext();
-            System.out.println("co wifi ko");
-            boolean hasWifi = sc.hasNext();
-            sc.nextLine();
-            System.out.println("he dieu hanh:");
-            String os = sc.nextLine();
-            System.out.println("bo nho");
-            float memory = sc.nextFloat();
-            System.out.println("mau");
-            sc.nextLine();
-            String color = sc.nextLine();
-            System.out.println("gia ban");
-            long price = sc.nextLong();
-            System.out.println("tnog so luong");
-            int totalSold = sc.nextInt();
-            phones[i] = new SmartPhone(brand, hasBluetooth, has5G, hasWifi, os, memory, color, price, totalSold);
-        }
+        int i = 0;
+        System.out.println("nhap so luong dien thoai co trong cua hang thu:"+(i+1));
+        int m=sc.nextInt();
+        sc.nextLine();
+            for (; i < m; i++) {
+
+                System.out.println("nhap thuong hieu dien thoai:");
+                String brand = sc.nextLine();
+                System.out.println("Có Bluetooth hay ko ");
+                boolean hasBluetooth = sc.nextBoolean();
+                System.out.println("Có 5G hay ko");
+                boolean has5G = sc.nextBoolean();
+                System.out.println("co wifi ko");
+                boolean hasWifi = sc.nextBoolean();
+                sc.nextLine();
+                System.out.println("he dieu hanh:");
+                String os = sc.nextLine();
+                System.out.println("bo nho");
+                float memory = sc.nextFloat();
+                System.out.println("mau");
+                sc.nextLine();
+                String color = sc.nextLine();
+                System.out.println("gia ban");
+                long price = sc.nextLong();
+                System.out.println("tong so luong");
+                int totalSold = sc.nextInt();
+                sc.nextLine();
+                phones[i] = new SmartPhone(brand, hasBluetooth, has5G, hasWifi, os, memory, color, price, totalSold);
+
+            }
+
+
+
+    }
+
+    public void nhapSmartPhone(){
 
     }
 
@@ -96,10 +112,10 @@ public class Store {
     @Override
     public String toString() {
         return "Store{" +
-                "Tên cửa hàng='" + name + '\'' +
-                ", Địa chỉ cửa hàng='" + address + '\'' +
-                ", Tổng số điện thoại có trong của hàng=" + n +
-                ", Mảng danh sách các điện thoại có trong cửa hàng=" + Arrays.toString(phones) +
-                '}';
+                "Tên cửa hàng='" + this.name + '\'' +
+                ", Địa chỉ cửa hàng='" + this.address + '\'' +
+                ", Tổng số điện thoại có trong của hàng=" + this.n +
+                ", Mảng danh sách các điện thoại có trong cửa hàng=" + Arrays.toString(phones)+
+                '}'+"\n";
     }
 }
