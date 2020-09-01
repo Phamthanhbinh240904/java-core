@@ -1,8 +1,5 @@
 package buoi6.Activity71;
 
-import suabai.Activity71.FulltimeEmployee;
-import suabai.Activity71.ParttimeEmployee;
-
 import java.util.Scanner;
 
 public class EmployeeManagement {
@@ -19,16 +16,20 @@ public class EmployeeManagement {
                 System.out.println("chon 1: nhan vien fulltime");
                 System.out.println("chon 2: nhan vien parttime");
                 int option  = sc.nextInt();
+                sc.nextLine();
                 if(option == 1){
-                    int baseSalary;
+                    int baseSalary=0;
                     System.out.println("nhap ten nhan vien:");
                     String name=sc.nextLine();
+
                     System.out.println("nhap ma nhan vien :");
                     String maNV=sc.nextLine();
-                    System.out.println("nhap cap bac:");
-                    int level=sc.nextInt();
+
                     System.out.println("sep : 1");
                     System.out.println("nhan vien : 2");
+                    System.out.println("chon cap bac:");
+                    int level=sc.nextInt();
+
                     if(level==1){
                         baseSalary=20000000;
                     }
@@ -55,9 +56,12 @@ public class EmployeeManagement {
             }
 
         }
-
-
     }
 
-
+    @Override
+    public String toString() {
+        String result;
+        result = super.toString();
+        return result;
+    }
 }

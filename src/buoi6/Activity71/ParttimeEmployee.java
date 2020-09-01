@@ -12,6 +12,10 @@ public class ParttimeEmployee extends Employee {
     }
 
 
+    public double getTotalSalary() {
+        return 100*workHourNumber;
+    }
+
 
     public int getWorkHourNumber() {
         return workHourNumber;
@@ -24,5 +28,14 @@ public class ParttimeEmployee extends Employee {
     public void printInfo(){
         super.printInfo();
         System.out.println("nhap so gio lam viec:"+workHourNumber);
+    }
+
+    @Override
+    public String toString() {
+        String result;
+        result = super.toString();
+        return result +
+                "workHourNumber=" + workHourNumber + getTotalSalary()+
+                '}';
     }
 }

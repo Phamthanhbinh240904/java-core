@@ -1,4 +1,4 @@
-package suabai.Activity71;
+package suabai.Activity711;
 
 import java.util.Scanner;
 

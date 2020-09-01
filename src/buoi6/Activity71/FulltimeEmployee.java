@@ -48,6 +48,18 @@ public class FulltimeEmployee extends Employee {
         System.out.println("so ngay lam them :"+overTimeDay);
     }
 
+    public double getTotalSalary() {
+        return baseSalary + overTimeDay*800000;
+    }
 
-    
+    @Override
+    public String toString() {
+        String result;
+        result = super.toString();
+        return result+"FulltimeEmployee{" +
+                "baseSalary=" + baseSalary +
+                ", level=" + level +
+                ", overTimeDay=" + overTimeDay +getTotalSalary()+
+                '}';
+    }
 }

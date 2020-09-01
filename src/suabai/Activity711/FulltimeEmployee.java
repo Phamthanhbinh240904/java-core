@@ -1,4 +1,5 @@
-package suabai.Activity71;
+package suabai.Activity711;
+
 
 public class FulltimeEmployee extends Employee {
     private double baseSalary = 0;
