@@ -99,6 +99,8 @@ public class SmartPhone {
         this.totalSold = totalSold;
     }
 
+
+
     @Override
     public String toString() {
         return "SmartPhone{" +

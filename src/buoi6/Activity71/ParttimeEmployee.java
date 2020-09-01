@@ -11,11 +11,18 @@ public class ParttimeEmployee extends Employee {
         this.workHourNumber = workHourNumber;
     }
 
+
+
     public int getWorkHourNumber() {
         return workHourNumber;
     }
 
     public void setWorkHourNumber(int workHourNumber) {
         this.workHourNumber = workHourNumber;
+    }
+
+    public void printInfo(){
+        super.printInfo();
+        System.out.println("nhap so gio lam viec:"+workHourNumber);
     }
 }

@@ -19,7 +19,8 @@ public class StoreManagement {
             String name=sc.nextLine();
             System.out.println("nhap dia chi cua hang "+(i+1));
             String address=sc.nextLine();
-            stores[i]=new Store(name,address);
+            stores[i]=new Store(n,name,address);
+
         }
 
 
@@ -44,6 +45,74 @@ public class StoreManagement {
         this.stores = stores;
     }
 
+    public String cuaHangBanNhieu(){
+        int a=0;
+        int index=0;
+        int i=0;
+        for(Store store : stores){
+            if(store.tongSoLuongDTBanDuoc()>a){
+                a=store.tongSoLuongDTBanDuoc();
+                index=i;
+            }
+            i++;
+        }
+        return stores[index].toString();
+    }
+
+    public String cuaHangBanIt(){
+        int a=0;
+        int index=0;
+        int i=0;
+        for(Store store : stores){
+            if(store.tongSoLuongDTBanDuoc()<a){
+                a=store.tongSoLuongDTBanDuoc();
+                index=i;
+            }
+            i++;
+        }
+        return stores[index].toString();
+    }
+
+
+    public String doanhThuLonNhat(){
+        long a=0;
+        int index=0;
+        int i=0;
+        for(Store store : stores){
+            if(store.tongDoanhThu()>a){
+                a=store.tongDoanhThu();
+                index=i;
+            }
+            i++;
+        }
+        return stores[index].toString();
+    }
+
+    public String doanhThuNhoNhat(){
+        long a=0;
+        int index=0;
+        int i=0;
+        for(Store store : stores){
+            if(store.tongDoanhThu()<a){
+                a=store.tongDoanhThu();
+                index=i;
+            }
+            i++;
+        }
+        return stores[index].toString();
+    }
+
+    public int tongDienThoai5G(){
+        int count=0;
+        for(Store store : stores){
+            if(store.tongBlueToolth()==1){
+                count=count+1;
+            }
+        }
+        return count;
+    }
+
+
     @Override
     public String toString() {
         return "quan ly cua hang\n" +
@@ -51,6 +120,8 @@ public class StoreManagement {
                 "\n Danh sách các cửa hàng\n" + Arrays.toString(stores) +
                 '}'+"\n";
     }
+
+
 
  
 }

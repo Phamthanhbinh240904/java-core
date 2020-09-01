@@ -12,9 +12,11 @@ public class Store {
     public Store() {
     }
 
-    public Store(int n) {
+    public Store(int n,String name, String address) {
         phones = new SmartPhone[n];
         this.n=n;
+        this.name = name;
+        this.address = address;
         Scanner sc = new Scanner(System.in);
         int i = 0;
         System.out.println("nhap so luong dien thoai co trong cua hang thu:"+(i+1));
@@ -102,6 +104,8 @@ public class Store {
         return counter;
     }
 
+
+
     public long tongDoanhThu() {
         long tong;
         SmartPhone smartPhone = new SmartPhone();
@@ -109,11 +113,25 @@ public class Store {
         return tong;
     }
 
+    public int tongBlueToolth(){
+
+        int count=0;
+
+        for(SmartPhone smartPhone : phones){
+            if(smartPhone.isHasBluetooth()==true||smartPhone.isHas5G()==true||smartPhone.isHasWifi()==true){
+                count=count+1;
+
+            }
+
+        }
+        return count;
+    }
+
     @Override
     public String toString() {
         return "Store{" +
-                "Tên cửa hàng='" + this.name + '\'' +
-                ", Địa chỉ cửa hàng='" + this.address + '\'' +
+                "Tên cửa hàng='" + name + '\'' +
+                ", Địa chỉ cửa hàng='" +address + '\'' +
                 ", Tổng số điện thoại có trong của hàng=" + this.n +
                 ", Mảng danh sách các điện thoại có trong cửa hàng=" + Arrays.toString(phones)+
                 '}'+"\n";

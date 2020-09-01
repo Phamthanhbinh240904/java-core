@@ -28,4 +28,10 @@ public class Employee {
     public void setMaNV(String maNV) {
         this.maNV = maNV;
     }
+
+    public void printInfo(){
+        System.out.println("nhap ten nhan vien:"+name);
+        System.out.println("nhap ma sinh vien:"+maNV);
+
+    }
 }
