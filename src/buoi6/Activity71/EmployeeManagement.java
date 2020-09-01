@@ -40,6 +40,8 @@ public class EmployeeManagement {
                     int overTimeDay=sc.nextInt();
                     sc.nextLine();
                     employees[i] = new FulltimeEmployee(name,maNV,baseSalary,level,overTimeDay);
+
+
                 }
                 if(option == 2){
                     System.out.println("nhap ten nhan vien:");
