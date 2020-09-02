@@ -65,6 +65,7 @@ public class FulltimeEmployee extends Employee {
             baseSalary=10000000;
         }
         return baseSalary+overTimeDay*800000;
+
     }
 
     @Override
