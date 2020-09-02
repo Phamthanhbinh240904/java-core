@@ -1,5 +1,6 @@
 package buoi6.Activity71;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EmployeeManagement {
@@ -58,10 +59,14 @@ public class EmployeeManagement {
         }
     }
 
+
     @Override
     public String toString() {
-        String result;
-        result = super.toString();
-        return result;
+
+
+        return "EmployeeManagement{" +
+
+                ", employees=" + Arrays.toString(employees) +
+                '}';
     }
 }

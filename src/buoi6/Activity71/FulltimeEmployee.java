@@ -11,9 +11,19 @@ public class FulltimeEmployee extends Employee {
 
     public FulltimeEmployee(String name, String maNV, int baseSalary, int level, int overTimeDay) {
         super(name, maNV);
-        this.baseSalary = baseSalary;
         this.level = level;
         this.overTimeDay = overTimeDay;
+
+        this.level = level;
+        if (this.level==2) {
+            this.baseSalary = 20000000;
+        }
+        if(this.level==1){
+            this.baseSalary = 10000000;
+        }
+
+        this.overTimeDay = overTimeDay;
+
     }
 
     public long getBaseSalary() {
@@ -49,7 +59,12 @@ public class FulltimeEmployee extends Employee {
     }
 
     public double getTotalSalary() {
-        return baseSalary + overTimeDay*800000;
+        if(level==1){
+            baseSalary=20000000;
+        }else {
+            baseSalary=10000000;
+        }
+        return baseSalary+overTimeDay*800000;
     }
 
     @Override
@@ -59,7 +74,7 @@ public class FulltimeEmployee extends Employee {
         return result+"FulltimeEmployee{" +
                 "baseSalary=" + baseSalary +
                 ", level=" + level +
-                ", overTimeDay=" + overTimeDay +getTotalSalary()+
+                ", overTimeDay=" + overTimeDay +"  tong luong:"+getTotalSalary()+
                 '}';
     }
 }
